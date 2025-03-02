@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+void addMasive(float* mas1, float* mas2, float* mas3, int n) {
+	for (int i = 0; i < n; i++)
+	{
+		mas3[i] = mas1[i] + mas2[i];
+	}
+}
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	int n = 3;
+	float mas1[3]{3.14, 2.2228, 1.3337 };
+	float mas2[3] = {13.280, 28.1113, 133.77};
+	float mas3[3];
+	addMasive(mas1, mas2, mas3, n);
+	for (int i = 0; i < n; i++)
+	{
+		cout << mas3[i] << ' ';
+	}
+}
